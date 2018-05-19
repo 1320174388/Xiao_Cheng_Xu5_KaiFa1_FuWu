@@ -1,4 +1,5 @@
 // pages/product/product.js
+var config = require('../../../config.js');
 Page({
 
   /**
@@ -6,15 +7,14 @@ Page({
    */
   data: {
       product_img_url:[
-        "../image/images-product/timg.jpg",
-        "../image/images-product/timg.jpg",
-        "../image/images-product/timg.jpg",
-        "../image/images-product/timg.jpg",
-        "../image/images-product/timg.jpg",
-        "../image/images-product/timg.jpg",
-        "../image/images-product/timg.jpg",
-        "../image/images-product/timg.jpg"
-
+        config.service.host_image_Url + "/images_product_timg.jpg",
+        config.service.host_image_Url + "/images_product_timg.jpg",
+        config.service.host_image_Url + "/images_product_timg.jpg",
+        config.service.host_image_Url + "/images_product_timg.jpg",
+        config.service.host_image_Url + "/images_product_timg.jpg",
+        config.service.host_image_Url + "/images_product_timg.jpg",
+        config.service.host_image_Url + "/images_product_timg.jpg",
+        config.service.host_image_Url + "/images_product_timg.jpg"
       ]
   },
 

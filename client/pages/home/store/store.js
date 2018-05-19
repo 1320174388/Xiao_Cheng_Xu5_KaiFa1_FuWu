@@ -1,4 +1,5 @@
 // pages/store/store.js
+var config = require('../../../config.js');
 Page({
 
   /**
@@ -6,11 +7,11 @@ Page({
    */
   data: {
       img_url:[
-        "../image/images-store/timg.jpg",
-        "../image/images-store/timg.jpg",
-        "../image/images-store/timg.jpg",
-        "../image/images-store/timg.jpg",
-        "../image/images-store/timg.jpg"
+        config.service.host_image_Url + "/images_store_timg.jpg",
+        config.service.host_image_Url + "/images_store_timg.jpg",
+        config.service.host_image_Url + "/images_store_timg.jpg",
+        config.service.host_image_Url + "/images_store_timg.jpg",
+        config.service.host_image_Url + "/images_store_timg.jpg",
       ]
   },
 

@@ -1,36 +1,38 @@
 // pages/home/index/index.js
+var config = require('../../../config.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+      host_image_Url:config.service.host_image_Url,
       // 轮播图img的地址
       swiper_imgUrl:[
-        "../image/images-index/swiper_banner.png",
-        "../image/images-index/swiper_banner.png",
-        "../image/images-index/swiper_banner.png",
-        "../image/images-index/swiper_banner.png"
+        config.service.host_image_Url + "/swiper_banner.png",
+        config.service.host_image_Url + "/swiper_banner.png",
+        config.service.host_image_Url + "/swiper_banner.png",
+        config.service.host_image_Url + "/swiper_banner.png"
       ],
       // icon图标的img和文字的地址
       icon:[
         {
-          imgUrl:"../image/images-index/ChanPin_icon.png",
+          imgUrl: config.service.host_image_Url + "/ChanPin_icon.png",
           text:"产品",
           bindtap:'tiaozhuan',
           url:"/pages/home/product/product"
         },{
-          imgUrl: "../image/images-index/ZhanShi_icon.png",
+          imgUrl: config.service.host_image_Url + "/ZhanShi_icon.png",
           text: "展示",
           bindtap: 'tiaozhuan2',
           url: "/pages/home/product/show/show"
         },{
-          imgUrl: "../image/images-index/MenDian_icon.png",
+          imgUrl: config.service.host_image_Url + "/MenDian_icon.png",
           text: "门店",
           bindtap: 'tiaozhuan',
           url:"/pages/home/store/store"
         },{
-          imgUrl: "../image/images-index/YuYue_icon.png",
+          imgUrl: config.service.host_image_Url + "/YuYue_icon.png",
           text: "预约",
           bindtap: 'tiaozhuan',
           url:"/pages/home/reservation/Subscribe/Subscribe"

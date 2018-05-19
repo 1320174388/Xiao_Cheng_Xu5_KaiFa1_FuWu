@@ -1,4 +1,5 @@
 // pages/product/product.js
+var config = require('../../../../config.js');
 Page({
 
   /**
@@ -7,52 +8,52 @@ Page({
   data: {
     // 图片和名称
     imgg: [{
-      imgUrl: "../../image/images-show/2.png",
+      imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "美肤液"
     }, {
-        imgUrl: "../../image/images-show/2.png",
+      imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "美容液"
     }, {
-        imgUrl: "../../image/images-show/2.png",
+        imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "精华霜"
     }, {
-        imgUrl: "../../image/images-show/2.png",
+        imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "口红"
     }, {
-        imgUrl: "../../image/images-show/2.png",
+        imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "卸妆水"
     }, {
-        imgUrl: "../../image/images-show/2.png",
+        imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "粉底液"
     }, {
-        imgUrl: "../../image/images-show/2.png",
+        imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "粉底液"
     }, {
-        imgUrl: "../../image/images-show/2.png",
+        imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "粉底液"
     }, {
-        imgUrl: "../../image/images-show/2.png",
+        imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "粉底液"
     }, {
-        imgUrl: "../../image/images-show/2.png",
+        imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "粉底液"
     }, {
-        imgUrl: "../../image/images-show/2.png",
+        imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "粉底液"
     }, {
-        imgUrl: "../../image/images-show/2.png",
+        imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "粉底液"
     }, {
-        imgUrl: "../../image/images-show/2.png",
+        imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "粉底液"
     }, {
-        imgUrl: "../../image/images-show/2.png",
+        imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "粉底液"
     }, {
-        imgUrl: "../../image/images-show/2.png",
+        imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "粉底液"
     }, {
-        imgUrl: "../../image/images-show/2.png",
+        imgUrl: config.service.host_image_Url + "/images-show2.png",
       text: "粉底液"
     }]
   },
