@@ -133,14 +133,14 @@
             <!--热线小图标  -->
             <image src='{{host_image_Url}}/phone_icon.png' class='rexian_phone_img'></image>
             <!--热线电话  -->
-            <text>服务热线：400-100-8071</text>
+            <text>服务热线：010-86220269</text>
         </view>
         <!--地址容器  -->
         <view class='rexian_container dizhi_container'>
             <!--地址小图标  -->
             <image src='{{host_image_Url}}/address_icon.png' class='dizhi_address_img'></image>
             <!--热线电话  -->
-            <text>公司地址：北京市亦庄经济开发区荣华中路富星国际2号楼1402</text>
+            <text>公司地址：北京市海淀区高里掌路1号院6号楼201-123</text>
         </view>
     </view>
 </view>

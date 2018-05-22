@@ -101,7 +101,7 @@ Page({
   // 拨打电话
   phoneCall:function(){
     wx.makePhoneCall({
-      phoneNumber: '123456789'
+      phoneNumber: '010-86220269'
     })
 
   },
