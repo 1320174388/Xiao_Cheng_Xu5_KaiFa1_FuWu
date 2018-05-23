@@ -7,6 +7,14 @@
     "pages/home/product/product",
     "pages/home/product/productdetails/productdetails",
     "pages/home/store/store",
+    "pages/admin/index/index",
+    "pages/admin/jurisdiction/jurisdiction",
+    "pages/admin/jurisdiction/addJob/addJob",
+    "pages/admin/jurisdiction/modifyJob/modifyJob",
+    "pages/admin/administrators/administrators",
+    "pages/admin/administrators/addManager/addManager",
+    "pages/admin/administrators/modifyManager/modifyManager",
+    
     "pages/index/index"
 
   ],
