@@ -2,7 +2,7 @@
 <view class="container">
     <view class='job_name_container'>
         <text>名称</text>
-        <input class='job_name' placeholder='输入管理员名称'></input>
+        <input class='job_name' placeholder='输入管理员名称' value='{{default_job}}'></input>
     </view>
     <view class='jur_name'>
         <text class='jur_quanxian'>职位</text>
@@ -10,7 +10,7 @@
             <view class='check_style' wx:for="{{quanxuan_arr}}" wx:key="index">
                 <radio value='index' checked='{{item.checked}}' class='check_st' bindtap='jur_choose' id="{{index}}"></radio>
                 <text>{{item.name}}</text>
-                <icon type='success' color='{{item.icon_color}}' class='jur_icon'></icon>
+                <icon type='success' color='{{item.icon_color}}' class='jur_icon' bindtap='jur_choose' id="{{index}}"></icon>
             </view>
         </radio-group>
     </view>

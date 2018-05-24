@@ -79,9 +79,11 @@ Page({
       url: './addJob/addJob',
     })
   },
-  jump_modify_job:function(){
+  jump_modify_job:function(res){
+    var idn = res.currentTarget.id;
+    var default_name = this.data.jur_manager_arr[idn];
     wx.navigateTo({
-      url: './modifyJob/modifyJob',
+      url: './modifyJob/modifyJob?def_name=' + default_name,
     })
   }
 })

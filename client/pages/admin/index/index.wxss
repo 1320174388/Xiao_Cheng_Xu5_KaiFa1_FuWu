@@ -1,6 +1,6 @@
 /* pages/admin/index/index.wxss */
-.container{
-  padding-top: 95rpx;
+page{
+  background: #F6F6F6;
 }
 .index_btn{
   width: 100%;

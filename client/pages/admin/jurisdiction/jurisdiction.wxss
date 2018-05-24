@@ -1,8 +1,10 @@
 /* pages/admin/jurisdiction/jurisdiction.wxss */
+page{
+  background: #F6F6F6;
+}
 .container{
   box-sizing: border-box;
   padding: 30rpx;
-  background: #F6F6F6;
   margin-bottom: 100rpx;
 }
 .jur_manager{

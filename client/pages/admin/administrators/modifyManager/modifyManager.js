@@ -18,14 +18,17 @@ Page({
         "name": "三级管理员",
         "icon_color": "gray"
       }
-    ]
+    ],
+    default_job:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      default_job: options.def_name
+    })
   },
 
   /**

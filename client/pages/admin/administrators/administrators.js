@@ -6,7 +6,14 @@ Page({
    */
   data: {
     jur_manager_arr: [
-      "一级管理员-于帅", "二级管理员豪美"
+      {
+        jur:"一级管理员",
+        name:"于帅"
+      },
+      {
+        jur: "二级管理员",
+        name:"豪美"
+      }
     ]
   },
 
@@ -79,9 +86,11 @@ Page({
       url: './addManager/addManager',
     })
   },
-  jump_modify_job: function () {
+  jump_modify_job: function (res) {
+    var idn = res.currentTarget.id;
+    var default_name = this.data.jur_manager_arr[idn].name;
     wx.navigateTo({
-      url: './modifyManager/modifyManager',
+      url: './modifyManager/modifyManager?def_name=' + default_name,
     })
   }
 })
