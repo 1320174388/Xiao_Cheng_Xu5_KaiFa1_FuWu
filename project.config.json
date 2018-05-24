@@ -37,8 +37,33 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "store",
+					"pathName": "pages/home/store/store",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "admin-index",
+					"pathName": "pages/admin/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "admin-管理员",
+					"pathName": "pages/admin/administrators/administrators",
+					"query": ""
+				}
+			]
 		}
 	}
 }
