@@ -8,18 +8,23 @@ Page({
     quanxuan_arr: [
       {
         "name": "一级管理员",
-        "icon_color": "gray"
+        "icon_color": "gray",
+        "checked":false
       },
       {
         "name": "二级管理员",
-        "icon_color": "gray"
+        "icon_color": "gray",
+        "checked": false
       },
       {
         "name": "三级管理员",
-        "icon_color": "gray"
+        "icon_color": "gray",
+        "checked": false
       }
     ],
-    default_job:""
+    default_job:"",
+    qx_idn: "",
+    jur_idn: ""
   },
 
   /**
@@ -27,7 +32,8 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      default_job: options.def_name
+      default_job: options.def_name,
+      qx_idn:options.qx_idn
     })
   },
 
@@ -80,21 +86,56 @@ Page({
 
   },
   jur_choose: function (res) {
+    this.setData({
+      jur_idn: res.currentTarget.id
+    })
+    // 改变颜色和checked属性值
     var idn = res.currentTarget.id;
     var color_gai = "quanxuan_arr[" + idn + "].icon_color";
+    var checked_gai = "quanxuan_arr[" + idn + "].checked";
     for (var i = 0; i < this.data.quanxuan_arr.length;i++){
       var color_gai_arr = "quanxuan_arr[" + i + "].icon_color"
+      var checked_gai_arr = "quanxuan_arr[" + i + "].checked";
         this.setData({
           [color_gai_arr]:"gray",
-          [color_gai]:"green"
+          [color_gai]:"green",
+          [checked_gai_arr]:false,
+          [checked_gai]:true
         });
         
     }
     
   },
-  jump_jur: function () {
-    wx.navigateBack({
-      delta: 1
+  job_change: function (res) {
+    this.setData({
+      default_job: res.detail.value
     })
+  },
+  jump_jur: function () {
+    var app = getApp();
+    var q_x = this.data.quanxuan_arr;
+    for (var i = 0; i < q_x.length; i++) {
+      if (q_x[i].checked) {
+        this.setData({
+          qx_checked: true
+        })
+      }
+    }
+    if (this.data.default_job == "") {
+      
+      app.point("请输入名称", "none", 2000)
+    } else {
+
+      if (this.data.qx_checked) {
+        
+        app.point("修改成功", "success", 2000)
+        wx.navigateTo({
+          url: '../administrators?job_change=' + this.data.default_job + '&qx_idn=' + this.data.qx_idn + '&jur_idn=' + this.data.jur_idn
+        })
+      } else {
+        
+        app.point("请选择权限", "none", 2000)
+      }
+    }
   }
 })

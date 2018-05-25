@@ -20,7 +20,9 @@ Page({
         "icon_color": "gray",
         "checked": false
       }
-    ]
+    ],
+    job_change: "",
+    qx_checked:false
   },
 
   /**
@@ -86,20 +88,48 @@ Page({
     if(icon_color=="gray"){
       this.setData({
         [color_gai]:"green",
-        [check_gai]:"true"
+        [check_gai]:true
       });
       
     }else{
       this.setData({
         [color_gai]: "gray",
-        [check_gai]: "false"
+        [check_gai]:false
       });
       
     }
   },
-  jump_jur:function(){
-    wx.navigateBack({
-      delta: 1
+  job_change: function (res) {
+    this.setData({
+      job_change: res.detail.value
     })
+  },
+  jump_jur:function(){
+    var q_x = this.data.quanxuan_arr;
+    for(var i=0;i<q_x.length;i++){
+      if(q_x[i].checked){
+        this.setData({
+          qx_checked:true
+        })
+      }
+    }
+    if (this.data.job_change==""){
+      var app = getApp();
+      app.point("请输入名称", "none", 2000)
+    }else{
+      if (this.data.qx_checked) {
+        var app = getApp();
+        app.point("添加成功", "", 2000)
+        wx.navigateTo({
+          url: '../jurisdiction?job_change=' + this.data.job_change+'&qx_idn=none'
+        })
+      } else {
+        var app = getApp();
+        app.point("请选择权限", "none", 2000)
+      }
+    }
+    
+
+    
   }
 })

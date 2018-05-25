@@ -2,11 +2,11 @@
 <view class="container">
     <view class='id_name_container'>
         <text>ID</text>
-        <input class='id_name' placeholder='输入ID账号'></input>
+        <input class='id_name' placeholder='输入ID账号' bindblur='id_change'></input>
     </view>
     <view class='job_name_container'>
         <text>名称</text>
-        <input class='job_name' placeholder='输入管理员名称'></input>
+        <input class='job_name' placeholder='输入管理员名称' bindblur='job_change'></input>
     </view>
     <view class='jur_name'>
         <text class='jur_quanxian'>职位</text>

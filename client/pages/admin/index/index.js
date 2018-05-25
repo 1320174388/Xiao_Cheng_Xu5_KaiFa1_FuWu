@@ -8,27 +8,27 @@ Page({
       btn_arr:[
         {
           "name":"权限管理",
-          "url":"../jurisdiction/jurisdiction"
+          "url":"../jurisdiction/jurisdiction?job_change=none&qx_idn=none"
         },
         {
           "name": "管理列表",
-          "url": "../administrators/administrators"
+          "url": "../administrators/administrators?job_change=none&qx_idn=none"
         },
         {
           "name": "门店管理",
-          "url": "../jurisdiction/jurisdiction"
+          "url": ""
         },
         {
           "name": "查看预约",
-          "url": "../jurisdiction/jurisdiction"
+          "url": ""
         },
         {
           "name": "信息管理",
-          "url": "../jurisdiction/jurisdiction"
+          "url": ""
         },
         {
           "name": "产品管理",
-          "url": "../jurisdiction/jurisdiction"
+          "url": ""
         }
       ]
   },

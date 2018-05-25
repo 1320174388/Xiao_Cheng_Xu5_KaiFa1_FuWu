@@ -2,7 +2,7 @@
 <view class="container">
     <view class='job_name_container'>
         <text>职位</text>
-        <input class='job_name' placeholder='输入职位名称' value='{{default_job}}'></input>
+        <input class='job_name' placeholder='输入职位名称' value='{{job_change}}' bindblur='job_change'></input>
     </view>
     <view class='jur_name'>
         <text class='jur_quanxian'>权限</text>
