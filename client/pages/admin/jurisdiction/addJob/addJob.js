@@ -115,17 +115,19 @@ Page({
     }
     if (this.data.job_change==""){
       var app = getApp();
-      app.point("请输入名称", "none", 2000)
+      app.point("请输入名称", "none", 1000)
     }else{
       if (this.data.qx_checked) {
-        var app = getApp();
-        app.point("添加成功", "", 2000)
-        wx.navigateTo({
-          url: '../jurisdiction?job_change=' + this.data.job_change+'&qx_idn=none'
+        // 添加元素
+        var jur_manager_arr=wx.getStorageSync("jur_manager_arr");
+        jur_manager_arr.push(this.data.job_change);
+        wx.setStorageSync("jur_manager_arr", jur_manager_arr);
+        wx.navigateBack({
+          delta: 1
         })
       } else {
         var app = getApp();
-        app.point("请选择权限", "none", 2000)
+        app.point("请选择权限", "none", 1000)
       }
     }
     

@@ -85,6 +85,7 @@ Page({
   onShareAppMessage: function () {
 
   },
+  // 点击单选框
   jur_choose: function (res) {
     this.setData({
       jur_idn: res.currentTarget.id
@@ -106,11 +107,13 @@ Page({
     }
     
   },
+  // 名称
   job_change: function (res) {
     this.setData({
       default_job: res.detail.value
     })
   },
+  // 提交
   jump_jur: function () {
     var app = getApp();
     var q_x = this.data.quanxuan_arr;
@@ -123,18 +126,25 @@ Page({
     }
     if (this.data.default_job == "") {
       
-      app.point("请输入名称", "none", 2000)
+      app.point("请输入名称", "none", 1000)
     } else {
 
       if (this.data.qx_checked) {
-        
-        app.point("修改成功", "success", 2000)
-        wx.navigateTo({
-          url: '../administrators?job_change=' + this.data.default_job + '&qx_idn=' + this.data.qx_idn + '&jur_idn=' + this.data.jur_idn
+        var manager_arr = wx.getStorageSync("manager_arr");
+        var jur_arr = wx.getStorageSync("jur_arr");
+        var manager_new = {
+          jur:jur_arr[this.data.jur_idn],
+          name:this.data.default_job
+        };
+        manager_arr.splice(this.data.qx_idn,1,manager_new);
+        wx.setStorageSync("manager_arr", manager_arr);
+        wx.navigateBack({
+          delta:1
         })
+        
       } else {
         
-        app.point("请选择权限", "none", 2000)
+        app.point("请选择权限", "none", 1000)
       }
     }
   }

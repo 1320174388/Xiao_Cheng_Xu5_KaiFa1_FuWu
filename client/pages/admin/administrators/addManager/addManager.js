@@ -25,7 +25,7 @@ Page({
     qx_checked:false,
     default_job:"",
     id_number:"",
-    qx_idn:"none",
+    qx_idn:"",
     jur_idn:""
   },
 
@@ -84,6 +84,7 @@ Page({
   onShareAppMessage: function () {
 
   },
+  // 权限选择
   jur_choose: function (res) {
     this.setData({
       jur_idn:res.currentTarget.id
@@ -105,11 +106,13 @@ Page({
     }
 
   },
+  // 管理员ID
   id_change: function(res){
     this.setData({
       id_number:res.detail.value
     })
   },
+  // 管理员名称
   job_change: function (res) {
     this.setData({
       default_job: res.detail.value
@@ -127,21 +130,28 @@ Page({
       }
     }
     if(this.data.id_number == ""){
-      app.point("请输入ID账号", "none", 2000)
+      app.point("请输入ID账号", "none", 1000)
     }else{
       if (this.data.default_job == "") {
 
-        app.point("请输入名称", "none", 2000)
+        app.point("请输入名称", "none", 1000)
       } else {
         if (this.data.qx_checked) {
-
-          app.point("修改成功", "success", 2000)
-          wx.navigateTo({
-            url: '../administrators?job_change=' + this.data.default_job + '&qx_idn=' + this.data.qx_idn+'&jur_idn='+this.data.jur_idn
+          var manager_arr = wx.getStorageSync("manager_arr");
+          var jur_arr = wx.getStorageSync("jur_arr");
+          var manager_new = {
+            jur: jur_arr[this.data.jur_idn],
+            name:this.data.default_job
+          };
+          manager_arr.push(manager_new);
+          wx.setStorageSync("manager_arr", manager_arr);
+          wx.navigateBack({
+            delta:1
           })
+          
         } else {
 
-          app.point("请选择权限", "none", 2000)
+          app.point("请选择权限", "none", 1000)
         }
       }
     }

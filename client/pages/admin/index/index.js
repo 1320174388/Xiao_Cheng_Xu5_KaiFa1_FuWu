@@ -8,11 +8,11 @@ Page({
       btn_arr:[
         {
           "name":"权限管理",
-          "url":"../jurisdiction/jurisdiction?job_change=none&qx_idn=none"
+          "url":"../jurisdiction/jurisdiction"
         },
         {
           "name": "管理列表",
-          "url": "../administrators/administrators?job_change=none&qx_idn=none"
+          "url": "../administrators/administrators"
         },
         {
           "name": "门店管理",
@@ -37,7 +37,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    wx.setStorageSync("jur_manager_arr", [
+      "总经理", "大堂经理"
+    ]);
+    wx.setStorageSync("manager_arr", [
+      {
+        jur: "一级管理员",
+        name: "于帅"
+      },
+      {
+        jur: "二级管理员",
+        name: "豪美"
+      }
+    ]);
+    wx.setStorageSync("jur_arr",["一级管理员","二级管理员","三级管理员"]);
+
   },
 
   /**
