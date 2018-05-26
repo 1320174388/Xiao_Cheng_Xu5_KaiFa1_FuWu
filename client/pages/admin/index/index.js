@@ -24,7 +24,7 @@ Page({
         },
         {
           "name": "信息管理",
-          "url": ""
+          "url": "../informationManager/infoManager"
         },
         {
           "name": "产品管理",
