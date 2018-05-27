@@ -1,0 +1,43 @@
+<view class="navs">
+    <text data-w="w" class='{{selected ? "changes" : "unchanges"}}' bindtap="select">最新预约</text>
+    <text data-y="y" class='{{select ? "changes" : "unchanges"}}' bindtap="select">历史预约</text>
+</view>
+<!--最新预约表单-->
+<view class='{{selected ? "show" : "hide" }}'>
+  <view class="warp-new">
+    <view class="left">
+      <checkbox></checkbox>
+    </view>
+    <view class="content">
+      <view class="box-left">
+        <view style='font-size:32rpx'>姓名：<text>张三</text></view>
+        <view>电话：<text>12345679878</text></view>
+        <view>性别：<text>女</text></view>
+      </view>
+      <view class="box-right">
+        <view class="Prompt-new">未处理</view>
+        <view style='margin-bottom: 18rpx'>2018年12月12日12时</view>
+      </view>
+    </view>
+  </view>
+  <button class="dete">确定提交</button>
+</view>
+<!--历史预约表单-->
+<view class='{{select ? "show" : "hide" }}'>
+  <view class="warp-old">
+    <view class="left">
+  
+    </view>
+    <view class="content">
+      <view class="box-left">
+        <view style='font-size:32rpx'>姓名：<text>张三</text></view>
+        <view>电话：<text>12345679878</text></view>
+        <view>性别：<text>女</text></view>
+      </view>
+      <view class="box-right">
+        <view class="Prompt-old">完成</view>
+        <view style='margin-bottom: 18rpx'>2018年12月12日12时</view>
+      </view>
+    </view>
+  </view>
+</view>

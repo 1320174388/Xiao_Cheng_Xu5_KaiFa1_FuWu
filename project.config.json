@@ -62,6 +62,12 @@
 					"name": "admin-管理员",
 					"pathName": "pages/admin/administrators/administrators",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/admin/reserve/reserve",
+					"pathName": "pages/admin/reserve/reserve",
+					"query": ""
 				}
 			]
 		}
