@@ -15,7 +15,13 @@
     "pages/admin/administrators/addManager/addManager",
     "pages/admin/administrators/modifyManager/modifyManager",
     "pages/admin/reserve/reserve",
-    "pages/admin/informationManager/infoManager"
+    "pages/admin/informationManager/infoManager",
+    "pages/home/admin/product_management/product_management/product_management",
+    "pages/home/admin/product_management/product_management_Add/product_management_Add",
+    "pages/home/admin/product_management/product_management_Edit/product_management_Edit",
+    "pages/home/admin/Store_management/Store_management/Store_management", 
+    "pages/home/admin/Store_management/Store_management_Add/Store_management_Add",
+    "pages/home/admin/Store_management/Store_management_Edit/Store_management_Edit"
   ],
   "window":{
     "backgroundColor":"#F6F6F6",
@@ -23,6 +29,7 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "首页",
     "navigationBarTextStyle":"black"
+
   },
   "tabBar": {
     "color": "#939393",

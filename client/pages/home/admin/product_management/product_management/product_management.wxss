@@ -1,0 +1,53 @@
+.qwe {
+  /* border: 1px solid red; */
+  padding: 30rpx;
+  display: flex;
+}
+
+.q1 {
+  /* border: 1px solid brown; */
+  
+}
+.q2{
+  padding-left: 200rpx;
+  display: flex;
+}
+.q3 {
+  padding-left: 240rpx;
+  padding-top: 100rpx;
+  /* border: 1px solid black; */
+}
+
+.qmc {
+  /* border: 1px solid red; */
+  width: 250rpx;
+}.qxq {
+   /* border: 1px solid red;  */
+  width:400rpx;
+  height: 120rpx;
+}
+.bj{
+  /* border: 1px solid red;  */
+}
+.sc{
+  /* border: 1px solid red;  */
+}
+
+.tupian {
+  /* border: 1px solid tomato; */
+  width: 180rpx;
+  height: 180rpx;
+}
+.button{
+  /* border: 1px solid red;  */
+
+ position: fixed;
+ bottom: 0;
+width: 99%;
+
+ }
+ .img{
+   padding-top: 2rpx;
+   width: 50rpx;
+   height:  50rpx;
+ }
