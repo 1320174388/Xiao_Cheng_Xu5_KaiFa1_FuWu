@@ -1,0 +1,27 @@
+<view class='w'>
+  <view class='q1'>
+    <view class='tupian'>
+      <image src='{{img}}'></image>
+     
+    </view>
+     <view class='q2'>
+    <view class='q'>
+      <view class='qq1'>产品名称 ：</view>
+      <view class='qq1'>
+        <input  value='{{name}}' type="text" class='ys' placeholder=' 输入产品名称' size="20" maxlength='11'></input>
+      </view>
+
+    </view>
+    <view class='qwe'></view>
+    <view class='q'>
+      产品介绍：
+    </view>
+    <view class='n'>
+      <input  value='{{name2}}' type="text" class='ys' placeholder=' 输入产品名称' size="20" maxlength='11'></input>
+    </view>
+  </view>
+  <view class='button'>
+    <button plain='true' type='primary'>确定</button>
+  </view>
+   </view>
+</view>

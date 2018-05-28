@@ -37,8 +37,33 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "产品管理首页",
+					"pathName": "pages/home/admin/product_management/product_management/product_management",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "产品管理添加",
+					"pathName": "pages/home/admin/product_management/product_management_Add/product_management_Add",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "产品管理编辑",
+					"pathName": "pages/home/admin/product_management/product_management_Edit/product_management_Edit",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "门店管理首页",
+					"pathName": "pages/home/admin/Store_management/Store_management/Store_management",
+					"query": ""
+				}
+			]
 		}
 	}
 }
