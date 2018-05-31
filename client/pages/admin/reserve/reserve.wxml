@@ -4,9 +4,11 @@
 </view>
 <!--最新预约表单-->
 <view class='{{selected ? "show" : "hide" }}'>
-  <view class="warp-new">
+  <view class="warp-new" bindtap='reserve_checked'>
     <view class="left">
-      <checkbox></checkbox>
+      <checkbox style='z-index:3;opacity:0;' checked='{{checked}}'></checkbox>
+      <icon type='success' class='new_reserve_icon'></icon>
+      <view class='new_reserve_icon_container' wx:if="{{icon_show}}"></view>
     </view>
     <view class="content">
       <view class="box-left">

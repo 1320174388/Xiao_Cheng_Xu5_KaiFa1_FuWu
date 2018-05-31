@@ -9,9 +9,9 @@ Page({
     currentTab: 0,
     // 轮播图片
     imgUrls: [
-      { sid: 1, src: 'https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/swiper_banner.png' },
-      { sid: 2, src: 'https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/lun1.jpg' },
-      { sid: 3, src: 'https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/lun2.jpg' }
+      'https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/swiper_banner.png',
+      'https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/lun1.jpg',
+      'https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/lun2.jpg'
     ],
     // 推荐列表信息
     recommendArray: [0, 1, 2],
@@ -191,6 +191,7 @@ Page({
         This.setData({
           showArray: showImg,
         })
+        wx.setStorageSync("show_img", showImg);
 
       }
     })
@@ -248,5 +249,18 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  up_pic:function(){
+    var that = this;
+    wx.chooseImage({
+      success: function(res) {
+        var img_urls_new = res.tempFilePaths;
+        that.setData({
+          imgUrls:img_urls_new
+        })
+      },
+      
+    })
+    
   }
 })

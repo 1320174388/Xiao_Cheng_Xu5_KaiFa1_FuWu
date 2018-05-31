@@ -25,11 +25,29 @@ page{
   margin: 16rpx auto;
 }
 .left{
+
   height:160rpx;
    display: flex;
   flex-direction:column;  
   justify-content: center; 
   margin:auto 28rpx;
+  position: relative;
+}
+.new_reserve_icon_container{
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  top: 55rpx;
+  border-radius: 50%;
+  background: #ccc;
+  z-index: 3;
+}
+.new_reserve_icon{
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  top: 55rpx;
+  z-index: 1;
 }
 .content{
   width:100%;

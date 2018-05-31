@@ -16,11 +16,11 @@ Page({
         },
         {
           "name": "门店管理",
-          "url": ""
+          "url": "../Store_management/Store_management/Store_management"
         },
         {
           "name": "查看预约",
-          "url": ""
+          "url": "../reserve/reserve"
         },
         {
           "name": "信息管理",
@@ -28,7 +28,7 @@ Page({
         },
         {
           "name": "产品管理",
-          "url": ""
+          "url": "../product_management/product_management/product_management"
         }
       ]
   },

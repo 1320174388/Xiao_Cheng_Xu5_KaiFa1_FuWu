@@ -20,7 +20,7 @@
         <!--按钮图片  -->
        <navigator url='../Store_management_Edit/Store_management_Edit?img={{img}}&name={{name}}&name2={{name2}}'>
         <view bindtap="bianji" class='img'>
-          <image class='img' src='../../../image/a/a1.png'></image>
+          <image class='img' src='../../image/a/a1.png'></image>
         </view>
         </navigator>
         <navigator url='../Store_management_Edit/Store_management_Edit?img={{img}}&name={{name}}&name2={{name2}}'>
@@ -28,7 +28,7 @@
 </navigator>
         <!--按钮图片  -->
         <view  bindtap="del" class='img'>
-          <image class='img' src='../../../image/a/a2.png'></image>
+          <image class='img' src='../../image/a/a2.png'></image>
         </view>
         <view bindtap="del"  class='sc'>删除</view>
 
