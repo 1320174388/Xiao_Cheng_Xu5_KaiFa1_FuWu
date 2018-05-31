@@ -19,12 +19,12 @@
       <view class='q2'>
         <!--按钮图片  -->
         <view class='img'>
-          <image class='img' src='../../../image/a/a1.png'></image>
+          <image class='img' src='../../image/a/a1.png'></image>
         </view>
         <view class='bj'>编辑</view>
         <!--按钮图片  -->
         <view class='img'>
-          <image class='img' src='../../../image/a/a2.png'></image>
+          <image class='img' src='../../image/a/a2.png'></image>
         </view>
         <view class='sc'>删除</view>
 

@@ -24,9 +24,9 @@
       <swiper class="swiper" indicator-dots="true" indicator-color="#b2b2b2"
               indicator-active-color="rgba(0, 0, 0, 0.43)" autoplay="true" circular="true" 
               interval="5000" duration="1000">
-        <block wx:for="{{imgUrls}}" wx:key="sid">
-          <swiper-item>
-            <image src="{{item.src}}" class='rotation-chart-picture'/>
+        <block wx:for="{{imgUrls}}" wx:key="index">
+          <swiper-item bindtap="up_pic">
+            <image src="{{item}}" class='rotation-chart-picture'/>
           </swiper-item>
         </block>
       </swiper>
@@ -204,8 +204,8 @@
    
   </view> 
     <!--底部图片上传 -->
-    <view class='show-foot-img'>
-      <text class='show-foot-add' bindtap='getPicture'>+</text>
+    <view class='show-foot-img' bindtap='getPicture'>
+      <text class='show-foot-add' bindcatch='getPicture'>+</text>
     </view>  
   <!-- </view> -->
 </view>

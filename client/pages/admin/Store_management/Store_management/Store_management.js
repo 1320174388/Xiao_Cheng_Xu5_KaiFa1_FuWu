@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    img:"../../../image/a/a1.png",
+    img:"../../image/a/a1.png",
     name:"门店名称",
     name2:"门店详情"
   },
