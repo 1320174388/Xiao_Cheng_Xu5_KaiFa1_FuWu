@@ -1,5 +1,6 @@
 // pages/Subscribe/Subscribe.js
 var config = require('../../../../config.js');
+var height = 0;
 Page({
 
   /**
@@ -23,6 +24,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     var e = wx.getSystemInfoSync();
+    height = e.windowHeight;
     that.setData({
       window_width: e.windowWidth
     })
@@ -123,14 +125,21 @@ Page({
   //后台按钮变化后的效果
   admin_btn_event2: function () {
     wx.navigateTo({
-      url: '../../admin/index/index',
+      url: '../../../admin/index/index',
     })
   },
   // 后台按钮拖拽效果
   admin_move: function (res) {
+    var clientY = res.touches[0].clientY - 15;
+    if (clientY >= (height - (height / 18))) {
+      clientY = height - (height / 18);
+    };
+    if (clientY <= 0) {
+      clientY = 0;
+    }
     this.setData({
       admin_left: res.touches[0].clientX - 20,
-      admin_top: res.touches[0].clientY - 15
+      admin_top: clientY
     })
   },
   admin_move_end: function () {
@@ -151,7 +160,7 @@ Page({
         that.setData({
           admin_btn_event: 'admin_enter'
         })
-      }, 5000));
+      }, 2000));
       wx.getStorageSync("hide_btn");
     } else {
       that.setData({
@@ -167,7 +176,7 @@ Page({
         that.setData({
           admin_btn_event: 'admin_enter'
         })
-      }, 5000));
+      }, 2000));
       wx.getStorageSync("hide_btn");
     }
   }

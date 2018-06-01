@@ -38,7 +38,14 @@
 		},
 		"miniprogram": {
 			"current": -1,
-			"list": []
+			"list": [
+				{
+					"id": 0,
+					"name": "后台首页",
+					"pathName": "pages/admin/index/index",
+					"query": ""
+				}
+			]
 		}
 	}
 }

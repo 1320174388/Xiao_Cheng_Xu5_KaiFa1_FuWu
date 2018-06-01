@@ -84,6 +84,7 @@ page{
   background-color:#ffffff;
   font-size:24rpx;
   display: flex;
+  margin-bottom: 20rpx;
 }
 .Prompt-old{
   display: flex;
@@ -107,7 +108,7 @@ page{
 .dete{
   width:100%;
   background-color:#5DAEF8;
-  color:wheat;
+  color:#ffffff;
   position:fixed;
   bottom:0;
 }

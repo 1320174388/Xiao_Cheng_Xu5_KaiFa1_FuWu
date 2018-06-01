@@ -5,7 +5,7 @@
 <view class="shelf-nav">
 
   <view  wx:for="{{imgg}}" wx:key="index">
-    <image src='{{item.showSrc}}'></image>
+    <image wx:if="{{item}}" src='{{item.showSrc}}'></image>
   </view>
 
 </view>

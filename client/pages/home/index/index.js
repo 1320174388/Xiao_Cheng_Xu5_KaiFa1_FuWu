@@ -1,5 +1,6 @@
 // pages/home/index/index.js
 var config = require('../../../config.js');
+var height = 0;
 Page({
 
   /**
@@ -43,8 +44,8 @@ Page({
       animationData:"",
       
       // 后台按钮位置
-      admin_left:0,
-      admin_top:100,
+      admin_left:"",
+      admin_top:400,
       // 屏幕宽度
       window_width:'',
       // 后台按钮宽度
@@ -63,6 +64,7 @@ Page({
 
     wx.setStorageSync("admin_top", that.data.admin_top);
     var e = wx.getSystemInfoSync();
+    height = e.windowHeight;
     that.setData({
       window_width:e.windowWidth
     })
@@ -71,8 +73,11 @@ Page({
       that.setData({
         admin_btn_width: res.width
       })
-      
-      
+      wx.setStorageSync("admin_left", that.data.window_width - that.data.admin_btn_width/2);
+      that.setData({
+        admin_left: wx.getStorageSync("admin_left")
+
+      })
     }).exec()
     
   },
@@ -81,6 +86,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    
     
   },
 
@@ -193,9 +199,16 @@ Page({
   },
   // 后台按钮拖拽效果
   admin_move:function(res){
+    var clientY = res.touches[0].clientY - 15;
+    if (clientY >= (height - (height/18))){
+      clientY = height - (height/18);
+    };
+    if (clientY <= 0){
+      clientY = 0;
+    }
     this.setData({
-      admin_left:res.touches[0].clientX-20,
-      admin_top: res.touches[0].clientY-15
+      admin_left: res.touches[0].clientX - 20,
+      admin_top: clientY
     })
   },
   admin_move_end:function(){
@@ -216,7 +229,7 @@ Page({
         that.setData({
           admin_btn_event: 'admin_enter'
         })
-      }, 5000));
+      }, 2000));
       wx.getStorageSync("hide_btn");
     }else{
       that.setData({
@@ -232,7 +245,7 @@ Page({
         that.setData({
           admin_btn_event: 'admin_enter'
         })
-      }, 5000));
+      }, 2000));
       wx.getStorageSync("hide_btn");
     }
   }

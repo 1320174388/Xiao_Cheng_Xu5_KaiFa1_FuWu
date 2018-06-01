@@ -51,6 +51,58 @@ Page({
       }
     ]);
     wx.setStorageSync("jur_arr",["一级管理员","二级管理员","三级管理员"]);
+    wx.setStorageSync("reserve_arr_false",[{
+      name:"张三",
+      phone:12345678978,
+      sex:"男",
+      time:"2018年12月12日12时",
+      reserve:false,
+      reserve_text:"未处理"
+
+    },
+      {
+        name: "张四",
+        phone: 12345678978,
+        sex: "女",
+        time: "2018年10月02日10时",
+        reserve: false,
+        reserve_text: "未处理"
+
+      }, {
+        name: "张五",
+        phone: 12345678978,
+        sex: "男",
+        time: "2018年8月19日18时",
+        reserve: false,
+        reserve_text: "未处理"
+
+      }] );
+    wx.setStorageSync("reserve_arr_true", [{
+      name: "王三",
+      phone: 12345678978,
+      sex: "男",
+      time: "2018年12月12日12时",
+      reserve: true,
+      reserve_text: "已处理"
+
+    },
+    {
+      name: "王四",
+      phone: 12345678978,
+      sex: "女",
+      time: "2018年10月02日10时",
+      reserve: true,
+      reserve_text: "已处理"
+
+    }, {
+      name: "王五",
+      phone: 12345678978,
+      sex: "男",
+      time: "2018年8月19日18时",
+      reserve: true,
+      reserve_text: "已处理"
+
+    }])
 
   },
 
