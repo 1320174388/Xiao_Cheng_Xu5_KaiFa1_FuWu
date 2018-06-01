@@ -161,7 +161,7 @@ Page({
         that.setData({
           admin_btn_event: 'admin_enter'
         })
-      }, 5000));
+      }, 2000));
       wx.getStorageSync("hide_btn");
     } else {
       that.setData({
@@ -177,7 +177,7 @@ Page({
         that.setData({
           admin_btn_event: 'admin_enter'
         })
-      }, 5000));
+      }, 2000));
       wx.getStorageSync("hide_btn");
     }
   }

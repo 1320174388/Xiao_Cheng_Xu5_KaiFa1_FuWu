@@ -123,7 +123,7 @@ Page({
   //后台按钮变化后的效果
   admin_btn_event2: function () {
     wx.navigateTo({
-      url: '../../admin/index/index',
+      url: '../../../admin/index/index',
     })
   },
   // 后台按钮拖拽效果
@@ -151,7 +151,7 @@ Page({
         that.setData({
           admin_btn_event: 'admin_enter'
         })
-      }, 5000));
+      }, 2000));
       wx.getStorageSync("hide_btn");
     } else {
       that.setData({
@@ -167,7 +167,7 @@ Page({
         that.setData({
           admin_btn_event: 'admin_enter'
         })
-      }, 5000));
+      }, 2000));
       wx.getStorageSync("hide_btn");
     }
   }

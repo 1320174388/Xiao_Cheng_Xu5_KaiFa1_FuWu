@@ -43,8 +43,8 @@ Page({
       animationData:"",
       
       // 后台按钮位置
-      admin_left:0,
-      admin_top:100,
+      admin_left:"",
+      admin_top:267,
       // 屏幕宽度
       window_width:'',
       // 后台按钮宽度
@@ -71,8 +71,11 @@ Page({
       that.setData({
         admin_btn_width: res.width
       })
-      
-      
+      wx.setStorageSync("admin_left", that.data.window_width - that.data.admin_btn_width/2);
+      that.setData({
+        admin_left: wx.getStorageSync("admin_left")
+
+      })
     }).exec()
     
   },
@@ -81,6 +84,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    
     
   },
 
@@ -216,7 +220,7 @@ Page({
         that.setData({
           admin_btn_event: 'admin_enter'
         })
-      }, 5000));
+      }, 2000));
       wx.getStorageSync("hide_btn");
     }else{
       that.setData({
@@ -232,7 +236,7 @@ Page({
         that.setData({
           admin_btn_event: 'admin_enter'
         })
-      }, 5000));
+      }, 2000));
       wx.getStorageSync("hide_btn");
     }
   }
