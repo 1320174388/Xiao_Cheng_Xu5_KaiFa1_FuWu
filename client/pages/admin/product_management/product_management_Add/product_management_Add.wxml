@@ -1,13 +1,15 @@
 <view class='w'>
   <view class='q1'>
     <view class='tupian'>
-      <image url='..\..\image\images-index\a.png'></image>
+     
+<image class='tupian' src='{{img}}' bindtap='choose' ></image>
+
     </view>
      <view class='q2'>
     <view class='q'>
       <view class='qq1'>产品名称 ：</view>
       <view class='qq1'>
-        <input type="text" class='ys' placeholder=' 输入产品名称' size="20" maxlength='11'></input>
+        <input type="text" value='{{name1}}' class='ys' placeholder=' 输入产品名称' size="20" bindblur='cms1' ></input>
       </view>
 
     </view>
@@ -16,13 +18,13 @@
       产品介绍：
     </view>
     <view class='n'>
-      <input class='n' type="text" placeholder='  内容填写' size="20"></input>
+      <input class='n' value='{{name2}}'  type="text" placeholder='  产品详情' size="20" bindblur='cms2'></input>
     </view>
-
-
   </view>
-  <view class='button'>
-    <button plain='true' type='primary'>确定添加</button>
+  <view >
+   
+    <button  class='button' bindtap='check' >确定</button>
+    
   </view>
    </view>
 </view>

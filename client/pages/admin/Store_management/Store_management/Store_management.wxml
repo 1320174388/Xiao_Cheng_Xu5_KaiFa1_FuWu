@@ -1,39 +1,46 @@
 <!--pages/home/admin/product_management/product_management/product_management.wxml-->
 <!--颜色棕色  -->
-<view>
-  <!--外面  -->
-  <view class='qwe'>
-    <!--图片  -->
-    <view class='q1'>
-      <view class='tupian'>
-        <image  class='tupian' src='{{img}}'></image>
-      </view>
-    </view>
-    <!--文字  -->
-    <view class='q1'>
-      <!--商品名称  -->
-      <view class='qmc'>{{name}}</view>
-      <!--商品详情  -->
-      <view class='qxq'>{{name2}}</view>
-      <!--  -->
-      <view class='q2'>
-        <!--按钮图片  -->
-       <navigator url='../Store_management_Edit/Store_management_Edit?img={{img}}&name={{name}}&name2={{name2}}'>
-        <view bindtap="bianji" class='img'>
-          <image class='img' src='../../image/a/a1.png'></image>
-        </view>
-        </navigator>
-        <navigator url='../Store_management_Edit/Store_management_Edit?img={{img}}&name={{name}}&name2={{name2}}'>
-        <view bindtap="bianji" class='bj'>编辑</view>
-</navigator>
-        <!--按钮图片  -->
-        <view  bindtap="del" class='img'>
-          <image class='img' src='../../image/a/a2.png'></image>
-        </view>
-        <view bindtap="del"  class='sc'>删除</view>
 
+
+
+
+
+  <view class='zuiwai'>
+    <!--外面  -->
+    <view class='qwe' wx:for='{{fa_arr}}' wx:key='index'>
+      <!--图片  -->
+      <view class='q1'>
+        <view class='tupian'>
+          <image class='tupian' src='{{item.img}}'></image>
+        </view>
+      </view>
+      <!--文字  -->
+      <view class='q1'>
+        <!--商品名称  -->
+        <view class='qmc'>{{item.name1}}</view>
+        <!--商品详情  -->
+        <view class='qxq'>{{item.name2}}</view>
+        <!--  -->
+        <view class='q2'>
+          <!--按钮图片  -->
+          <view class='img'>
+            <image class='img' src='../../../image/a/a1.png'></image>
+          </view>
+          <navigator url='../Store_management_Edit/Store_management_Edit?index={{index}}'>
+            <view class='bj' bindtap='bj1' >　编辑　</view>
+          </navigator>
+          <!--按钮图片  -->
+          <view class='img'>
+            <image class='img' src='../../../image/a/a2.png'></image>
+          </view>
+          <view class='sc' bindtap='sc1' id='{{index}}' >　删除</view>
+
+        </view>
       </view>
     </view>
+    <navigator url='../Store_management_Add/Store_management_Add'>
+      <button class='button'   bindtap='zj'>增加</button>
+    </navigator>
+
+    <view class='dibu'></view>
   </view>
-  <button  bindtap="add"  class='button' plain='true' type='primary'>增加</button>
-</view>
