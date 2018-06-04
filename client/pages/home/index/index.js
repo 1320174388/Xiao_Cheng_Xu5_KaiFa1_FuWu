@@ -239,6 +239,11 @@ Page({
       }, 2000));
       wx.getStorageSync("hide_btn");
     }
+  },
+  phone_dlth:function(){
+    wx.makePhoneCall({
+      phoneNumber: '01086220269'
+    })
   }
   
   
