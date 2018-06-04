@@ -106,28 +106,12 @@ Page({
    */
   changeSure: function () {
     var that = this;
-    function data_in_array(res, data) {
-      for (var i in data) {
-        if (res == data[i]) {
-          return true;
-        }
-      }
-      return false;
-    };
-    // console.log(recommendAdd);
-    var add = this.data.recommendArray;
-    for (var i in recommendAdd) {
-      if (!data_in_array(recommendAdd[i], add)) {
-          add = recommendAdd[i];
-      }
-    }
     that.setData({
-      recommendArray: add,
+      recommendArray: recommendAdd,
       productInfo: true,
       productSubmit: false
-    })
+    });
   },
-  // 
   checkboxChange: function (e) {
     recommendAdd = e.detail.value;
   },
