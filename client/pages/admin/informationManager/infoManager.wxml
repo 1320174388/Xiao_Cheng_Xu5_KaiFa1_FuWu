@@ -86,7 +86,6 @@
                 {{item.recommendAddName}}
               </view> 
               <!--  推荐产品添加按钮 -->
-              <!--   -->
               <view style="flex:0.25" class="product-recommend-add-radio">
                 <checkbox value='{{index}}'
                 checked="{{item.checked}}"></checkbox>
