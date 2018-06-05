@@ -30,15 +30,17 @@
   width: 40rpx;
   height: 40rpx;
 }
-/*地老天荒售后电话  */
+/*地老天荒售后电话 */
 .dlth{
-  width: 100%;
-  text-align: center;
-  color: #ccc;
-  font-size: 30rpx;
-  padding: 10rpx 0 20rpx 0;
+width: 100%;
+text-align: center;
+color: #ccc;
+font-size: 30rpx;
+padding: 30rpx 0 20rpx 0;
+background: #F3F3F3;
+float:left;
 }
 .dlth_logo{
-  width: 400rpx;
-  margin-bottom: 10rpx;
+width: 400rpx;
+margin-bottom: 10rpx;
 }

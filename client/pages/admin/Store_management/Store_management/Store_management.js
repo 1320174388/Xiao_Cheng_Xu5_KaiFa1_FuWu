@@ -28,17 +28,16 @@ Page({
    */
   onLoad: function (e) {
 
-
+    
 
 
   },
   //点击编辑发送数据到缓存
   bj1: function (r) {
 
-    wx.setStorageSync('Store0', this.data.Store_arr)
   },
   zj: function (t) {
-    wx.setStorageSync('Store0', this.data.Store_arr)
+   
   },
 
   sc1: function (k) {

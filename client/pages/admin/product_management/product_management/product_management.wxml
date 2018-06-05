@@ -29,7 +29,7 @@
             <image class='img' src='../../image/a/a1.png'></image>
           </view>
           <navigator url='../product_management_Edit/product_management_Edit?index={{index}}'>
-            <view class='bj' atchtap='bj1' >　编辑　</view>
+            <view class='bj' bindtap='bj1' >　编辑　</view>
           </navigator>
           <!--按钮图片  -->
           <view class='img'>

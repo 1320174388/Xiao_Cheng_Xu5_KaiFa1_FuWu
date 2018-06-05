@@ -30,15 +30,14 @@ Page({
 
 
 
-
   },
   //点击编辑发送数据到缓存
   bj1: function (r) {
 
-    wx.setStorageSync('key0', this.data.fa_arr)
+    
   },
   zj: function (t) {
-    wx.setStorageSync('key0', this.data.fa_arr)
+    
   },
 
   sc1: function (k) {
