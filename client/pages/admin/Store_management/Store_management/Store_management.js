@@ -8,7 +8,7 @@ Page({
    */
   data: {
     Store_arr: [{
-      'img': "/pages/home/image/a/dian.png",
+      'img': "/pages/admin/image/a/dian.png",
       'Product_name': "石景山店",
       'Product_Info': "石景山古城店"
     }

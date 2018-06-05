@@ -56,7 +56,8 @@ Page({
 
   },
   check: function (w) { 
-    var that = this
+    var that = this;
+    var app = getApp();
     
     //获取
     var f_arr = wx.getStorageSync('key0')
@@ -71,20 +72,24 @@ Page({
     }
 
   
-
+    // 判断名称和产品介绍是否为空
+    if (name2.Product_name == "") {
+      app.point("请输入产品名称", "none", 1000);
+    } else {
+      if (name2.Product_Info == "") {
+        app.point("请输入产品介绍", "none", 1000);
+      } else {
+        //替换
+        f_arr.splice(that.data.ab, 1, name2);
+        //重新发回缓存
+        wx.setStorageSync('key0', f_arr)
+        wx.navigateBack({
+          delta: 1
+        });
+      }
+    }
    
-    console.log(f_arr)
 
-
-
-    //替换
-    f_arr.splice(that.data.ab, 1, name2);
-    //重新发回缓存
-    wx.setStorageSync('key0', f_arr)
-
-
-
-   
 
     //   var huoqu = wx.getStorageSync('key0')
 
@@ -99,12 +104,7 @@ Page({
 
     //   wx.setStorageSync('key0', f_arr)
  
-      wx.navigateBack({
-        delta: 1
-      })
-       
-    
-
+ 
 
   },
 

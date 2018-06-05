@@ -20,7 +20,7 @@
         </view>
         <view class='n'>
 
-          <textarea class='n' name='Product_Info' value='{{name2}}' size="20"  style='height:100px ;background:#ffffff ; width: 100%; padding: 20rpx;  box-sizing: border-box;'> </textarea>
+          <textarea class='n' name='Product_Info' value='{{name2}}' size="20"  style='height:100px ;background:#ffffff ; width: 100%; padding: 20rpx;  box-sizing: border-box;'  maxlength="1000"> </textarea>
 
 
 

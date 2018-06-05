@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    img: "/pages/home/image/a/jia.png",
+    img: "/pages/admin/image/a/jia.png",
     name1: "",
     name2: "",
     v1: '',
@@ -49,7 +49,7 @@ Page({
   //确定保存
   check: function (w) {
     var that = this
-
+    var app = getApp();
     //获取
     var f_arr = wx.getStorageSync('key0')
 
@@ -58,7 +58,6 @@ Page({
     var name2 = w.detail.value
    
       name2.img = that.data.img[0]
-    console.log(name2)
 
 
    
@@ -66,24 +65,33 @@ Page({
 
 
     if (name2.img =='/') {
-wx.showToast({
-  title: '请添加一张图片',
-  icon:'none'
-})
+          wx.showToast({
+            title: '请添加一张图片',
+            icon:'none',
+            duration:1000
+          })
 
-
-     console.log("图片没改变")
+          console.log("图片没改变")
     } else {
 
-      //替换
-      f_arr.push(name2);
-      //重新发回缓存
-      wx.setStorageSync('key0', f_arr)
+      // 判断名称和产品介绍是否为空
+      if (name2.Product_name == "") {
+        app.point("请输入产品名称", "none", 1000);
+      } else {
+        if (name2.Product_Info == "") {
+          app.point("请输入产品介绍", "none", 1000);
+        } else {
+          //替换
+          f_arr.push(name2);
+          //重新发回缓存
+          wx.setStorageSync('key0', f_arr)
 
-      wx.navigateBack({
-        delta: 1
-      })
-    
+          wx.navigateBack({
+            delta: 1
+          })
+        }
+      }
+ 
     }
 
 

@@ -249,6 +249,7 @@ Page({
       wx.getStorageSync("hide_btn");
     }
   },
+  // 地老天荒拨打电话事件
   phone_dlth:function(){
     wx.makePhoneCall({
       phoneNumber: '01086220269'
