@@ -7,7 +7,7 @@
 
   <view class='zuiwai'>
     <!--外面  -->
-    <view class='qwe' wx:for='{{fa_arr}}' wx:key='index'>
+    <view class='qwe' wx:for='{{fa_arr}}' wx:key='index' >
       <!--图片  -->
       <view class='q1'>
         <view class='tupian'>
@@ -15,19 +15,21 @@
         </view>
       </view>
       <!--文字  -->
-      <view class='q1'>
+      <view class='q1' >
         <!--商品名称  -->
-        <view class='qmc'>{{item.name1}}</view>
+        <view class='qmc'>{{item.Product_name}}</view>
         <!--商品详情  -->
-        <view class='qxq'>{{item.name2}}</view>
+        <scroll-view class='qxq'   >
+            <textarea class='n' value='{{item.Product_Info}}'  size="20"  style='height:50px ;background:#ffffff ; width: 100%;   box-sizing: border-box;'    > </textarea>
+        </scroll-view>
         <!--  -->
-        <view class='q2'>
+        <view class='q2' >
           <!--按钮图片  -->
           <view class='img'>
             <image class='img' src='../../../image/a/a1.png'></image>
           </view>
           <navigator url='../product_management_Edit/product_management_Edit?index={{index}}'>
-            <view class='bj' bindtap='bj1' >　编辑　</view>
+            <view class='bj' atchtap='bj1' >　编辑　</view>
           </navigator>
           <!--按钮图片  -->
           <view class='img'>
@@ -38,9 +40,9 @@
         </view>
       </view>
     </view>
-    <navigator url='../product_management_Add/product_management_Add'>
-      <button class='button'   bindtap='zj'>增加</button>
+    <navigator url='../product_management_Add/product_management_Add' >
+      <button class='button'   bindtap='zj'  >增加</button>
     </navigator>
 
-    <view class='dibu'></view>
+    <view  class='dibu'></view>
   </view>

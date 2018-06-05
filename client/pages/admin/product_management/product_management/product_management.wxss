@@ -4,6 +4,7 @@
   display: flex;
    margin-top: 40rpx; 
   background-color: white;
+  z-index: 1
 }
 
 .q1 {
@@ -26,7 +27,7 @@
 }.qxq {
    /* border: 1px solid red;  */
    padding-left: 20rpx;
-  width:400rpx;
+  width:500rpx;
   height: 120rpx;
   font-size: 15px;
   color:#c6c6c6;
@@ -58,6 +59,7 @@
   position: fixed;
   left: 0;
   bottom: 0;
+  z-index: 2
  }
  .img{
    padding-top: 2rpx;

@@ -10,14 +10,9 @@
    background-color: white;
    /* border: 1px solid red;    */
 width: 100%;
-height: 700rpx;
- 
+
 }
-.n{ background-color: white;
-  padding-top: 10rpx;
-   /* border: 1px solid red;  */
-  height:  50rpx;
-}
+
 .q{ background-color: white;
     /* border: 1px solid red;    */
   padding-left: 20rpx;
@@ -39,7 +34,9 @@ padding-top: 10rpx;
   position: fixed;
   left: 0;
   bottom: 0;
+  
  }
+ 
  .qq1{
    margin: 5rpx;
  }
@@ -47,4 +44,7 @@ padding-top: 10rpx;
    
    background-color:  gainsboro;
    height: 2rpx;
+ }
+.n{
+   margin-bottom: 100px
  }

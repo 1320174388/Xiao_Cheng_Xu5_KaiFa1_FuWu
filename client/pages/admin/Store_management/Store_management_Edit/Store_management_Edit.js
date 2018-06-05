@@ -28,7 +28,7 @@ Page({
     this.setData({ ab: e.index })
 
 
-    var key4 = wx.getStorageSync('key0')
+    var key4 = wx.getStorageSync('Store0')
 
 
     console.log(key4)
@@ -37,61 +37,65 @@ Page({
 
 
     that.setData({ img: key4[e.index].img })
-    that.setData({ name1: key4[e.index].name1 })
-    that.setData({ name2: key4[e.index].name2 })
+    that.setData({ name1: key4[e.index].Product_name })
+    that.setData({ name2: key4[e.index].Product_Info })
 
 
 
 
   },
-  cms1: function (a) {
+  // cms1: function (a) {
 
-    var that = this
-    if (that.data.v2 == '') {
-      that.setData({ v2: that.data.name2 })
-    }
+  //   var that = this
+  //   if (that.data.v2 == '') {
+  //     that.setData({ v2: that.data.name2 })
+  //   }
 
-    that.setData({ v1: a.detail.value })
-
-
-  },
-  cms2: function (b) {
-    var that = this
-    if (that.data.v1 == '') {
-      that.setData({ v1: that.data.name1 })
-    }
+  //   that.setData({ v1: a.detail.value })
 
 
+  // },
+  // cms2: function (b) {
+  //   var that = this
+  //   if (that.data.v1 == '') {
+  //     that.setData({ v1: that.data.name1 })
+  //   }
 
-    that.setData({ v2: b.detail.value })
 
 
-  },
+  //   that.setData({ v2: b.detail.value })
+
+
+  // },
   check: function (w) {
-
-
-
     var that = this
 
+    //获取
+    var f_arr = wx.getStorageSync('Store0')
 
 
-
-
-    var huoqu = wx.getStorageSync('key0')
-
-
-    var option = {
-      'img': that.data.img,
-      'name1': that.data.v1,
-      'name2': that.data.v2
+    //获取编辑的值
+    var name2 = w.detail.value
+    if (that.data.img == f_arr[that.data.ab].img) {
+      name2.img = that.data.img
+    } else {
+      name2.img = that.data.img[0]
     }
 
-    var f_arr = wx.getStorageSync('key0')
 
 
-    f_arr.splice(that.data.ab, 1, option);
 
-    wx.setStorageSync('key0', f_arr)
+    console.log(f_arr)
+
+
+
+    //替换
+    f_arr.splice(that.data.ab, 1, name2);
+    //重新发回缓存
+    wx.setStorageSync('Store0', f_arr)
+
+
+
 
 
     wx.navigateBack({

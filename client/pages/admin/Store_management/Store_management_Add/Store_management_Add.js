@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    img: "https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/timg.jpg",
+    img: "/pages/home/image/a/jia.png",
     name1: "",
     name2: "",
     v1: '',
@@ -36,31 +36,58 @@ Page({
     })
   },
   //获取数据
-  cms1: function (a) {
+  // cms1: function (a) {
 
-    var that = this
-    that.setData({ v1: a.detail.value })
+  //   var that = this
+  //   that.setData({ v1: a.detail.value })
 
-  },
-  cms2: function (b) {
-    var that = this
-    that.setData({ v2: b.detail.value })
-  },
+  // },
+  // cms2: function (b) {
+  //   var that = this
+  //   that.setData({ v2: b.detail.value })
+  // },
   //确定保存
   check: function (w) {
+    var that = this
 
-    var option = {
-      'img': this.data.img,
-      'name1': this.data.v1,
-      'name2': this.data.v2
+    //获取
+    var f_arr = wx.getStorageSync('Store0')
+
+
+    //获取编辑的值
+    var name2 = w.detail.value
+
+    name2.img = that.data.img[0]
+
+
+
+
+    if (name2.img == '/') {
+      wx.showToast({
+        title: '请添加一张图片',
+        icon: 'none'
+      })
+
+
+      console.log("图片没改变")
+    } else {
+
+      //替换
+      f_arr.push(name2);
+      //重新发回缓存
+      wx.setStorageSync('Store0', f_arr)
+
+      wx.navigateBack({
+        delta: 1
+      })
+
     }
-    var f_arr = wx.getStorageSync('key0')
-    f_arr.push(option)
 
-    wx.setStorageSync('key0', f_arr)
-    wx.navigateTo({
-      url: '../Store_management/Store_management'
-    })
+
+
+
+
+   
   },
 
   /**

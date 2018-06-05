@@ -7,10 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    fa_arr: [{
-      'img': " https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/AiMeiLi_one.png",
-      'name1': "精华洗面奶",
-      'name2': "精华洗面奶"
+    Store_arr: [{
+      'img': "/pages/home/image/a/dian.png",
+      'Product_name': "石景山店",
+      'Product_Info': "石景山古城店"
     }
 
 
@@ -35,10 +35,10 @@ Page({
   //点击编辑发送数据到缓存
   bj1: function (r) {
 
-    wx.setStorageSync('key0', this.data.fa_arr)
+    wx.setStorageSync('Store0', this.data.Store_arr)
   },
   zj: function (t) {
-    wx.setStorageSync('key0', this.data.fa_arr)
+    wx.setStorageSync('Store0', this.data.Store_arr)
   },
 
   sc1: function (k) {
@@ -53,11 +53,11 @@ Page({
       content: '是否确定删除',
       success: function (res) {
         if (res.confirm) {
-          var a_arr = wx.getStorageSync('key0')
+          var a_arr = wx.getStorageSync('Store0')
           a_arr.splice(abc, 1)
 
-          that.setData({ fa_arr: a_arr })
-          wx.setStorageSync('key0', a_arr)
+          that.setData({ Store_arr: a_arr })
+          wx.setStorageSync('Store0', a_arr)
 
 
         } else {
@@ -83,10 +83,10 @@ Page({
    */
   onShow: function () {
 
-    if (wx.getStorageSync('key0') == '') {
+    if (wx.getStorageSync('Store0') == '') {
 
     } else {
-      this.setData({ fa_arr: wx.getStorageSync('key0') })
+      this.setData({ Store_arr: wx.getStorageSync('Store0') })
     }
 
 

@@ -9,8 +9,8 @@ Page({
   data: {
     fa_arr: [{
       'img': " https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/AiMeiLi_one.png",
-      'name1': "精华洗面奶",
-      'name2': "精华洗面奶"
+      'Product_name': "精华洗面奶",
+      'Product_Info': "精华洗面奶"
     }
 
 
@@ -46,7 +46,7 @@ Page({
 
     var that = this
     var abc = k.currentTarget.id
-    console.log(k)
+   
 
     wx.showModal({
       title: '提示',
@@ -84,7 +84,7 @@ Page({
   onShow: function () {
 
     if (wx.getStorageSync('key0') == '') {
-
+console.log("没拿到数据")
     } else {
       this.setData({ fa_arr: wx.getStorageSync('key0') })
     }

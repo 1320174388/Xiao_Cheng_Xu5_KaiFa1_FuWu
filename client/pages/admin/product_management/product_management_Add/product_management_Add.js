@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    img: "https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/timg.jpg",
+    img: "/pages/home/image/a/jia.png",
     name1: "",
     name2: "",
     v1: '',
@@ -16,7 +16,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+
   },
   //选择图片
   choose: function (ch) {
@@ -36,79 +36,115 @@ Page({
     })
   },
   //获取数据
-  cms1: function (a) {
+  // cms1: function (a) {
 
-    var that = this
-    that.setData({ v1: a.detail.value })
-    
-  },
-  cms2: function (b) {
-    var that = this
-    that.setData({ v2: b.detail.value })
-  },
+  //   // var that = this
+  //   // that.setData({ v1: a.detail.value })
+
+  // },
+  // cms2: function (b) {
+  //   // var that = this
+  //   // that.setData({ v2: b.detail.value })
+  // },
   //确定保存
   check: function (w) {
+    var that = this
 
-    var option = {
-      'img': this.data.img,
-      'name1': this.data.v1,
-      'name2': this.data.v2
-    }
+    //获取
     var f_arr = wx.getStorageSync('key0')
-f_arr.push(option)
 
-    wx.setStorageSync('key0', f_arr)
-    wx.navigateTo({
-      url: '../product_management/product_management'
-    })
+
+    //获取编辑的值
+    var name2 = w.detail.value
+   
+      name2.img = that.data.img[0]
+    console.log(name2)
+
+
+   
+
+
+
+    if (name2.img =='/') {
+wx.showToast({
+  title: '请添加一张图片',
+  icon:'none'
+})
+
+
+     console.log("图片没改变")
+    } else {
+
+      //替换
+      f_arr.push(name2);
+      //重新发回缓存
+      wx.setStorageSync('key0', f_arr)
+
+      wx.navigateBack({
+        delta: 1
+      })
+    
+    }
+
+
+
+
+
+
+
+
+
+
+
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })
