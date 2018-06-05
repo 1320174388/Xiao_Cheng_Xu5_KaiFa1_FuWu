@@ -1,28 +1,35 @@
 <view class='w'>
-  <view class='q1'>
-    <view class='tupian'>
-      <image url='..\..\image\images-index\a.png'></image>
-    </view>
-     <view class='q2'>
-    <view class='q'>
-      <view class='qq1'>门店名称 ：</view>
-      <view class='qq1'>
-        <input type="text" class='ys' placeholder=' 输入门店名称' size="20" maxlength='11'></input>
+  <form bindsubmit="check">
+    <view class='q1'>
+      <view class='tupian'>
+
+        <image class='tupian' src='{{img}}' bindtap='choose' mode='widthFix'></image>
+
       </view>
+      <view class='q2'>
+        <view class='q'>
+          <view class='qq1'>产品名称 ：</view>
+          <view class='qq1'>
+            <input type="text" value='{{name1}}'name='Product_name'  class='ys' placeholder=' 输入产品名称' size="20"></input>
+          </view>
 
-    </view>
-    <view class='qwe'></view>
-    <view class='q'>
-      门店介绍：
-    </view>
-    <view class='n'>
-      <input class='n' type="text" placeholder='  内容填写' size="20"></input>
-    </view>
+        </view>
+        <view class='qwe'></view>
+        <view class='q'>
+          产品介绍：
+        </view>
+        <view class='n'>
+          <textarea class='n' value='{{name2}}' name='Product_Info' size="20" style='height:100px ;background:#ffffff ; width: 100%; padding: 20rpx;  box-sizing: border-box;' placeholder='  产品详情' maxlength="1000"> </textarea>
 
 
-  </view>
-  <view class='button'>
-    <button plain='true' type='primary'>确定添加</button>
-  </view>
-   </view>
+        </view>
+      </view>
+      <view>
+
+        <button class='button' formType="submit" >确定</button>
+
+      </view>
+    </view>
+  </form>
+
 </view>

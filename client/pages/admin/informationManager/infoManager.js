@@ -45,19 +45,19 @@ Page({
       },
       {
         id: 1,
-        recommendAddSrc: 'https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/AiMeiLi_one.png',
+        recommendAddSrc: 'https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/lun3.jpg',
         recommendAddName: '玉泽沐浴液',
         recommendDatiled: '玉泽官方正品 皮肤屏障修护身体乳液，补水滋润润肤露甘油。实验验证有效改善肌肤...'
       },
       {
         id: 2,
-        recommendAddSrc: 'https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/AiMeiLi_two.png',
+        recommendAddSrc: 'https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/lun2.jpg',
         recommendAddName: '洗护用品套装',
         recommendDatiled: '玉泽官方正品 皮肤屏障修护身体乳液，补水滋润润肤露甘油。实验验证有效改善肌肤...'
       },
       {
         id: 3,
-        recommendAddSrc: 'https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/images_product_timg.jpg',
+        recommendAddSrc: 'https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/lun1.jpg',
         recommendAddName: '玉泽沐浴液',
         recommendDatiled: '玉泽官方正品 皮肤屏障修护身体乳液，补水滋润润肤露甘油。实验验证有效改善肌肤...'
       },
@@ -106,28 +106,12 @@ Page({
    */
   changeSure: function () {
     var that = this;
-    function data_in_array(res, data) {
-      for (var i in data) {
-        if (res == data[i]) {
-          return true;
-        }
-      }
-      return false;
-    };
-    console.log(recommendAdd);
-    var add = this.data.recommendArray;
-    for (var i in recommendAdd) {
-      if (!data_in_array(recommendAdd[i], add)) {
-        add[add.length] = recommendAdd[i];
-      }
-    }
     that.setData({
-      recommendArray: add,
+      recommendArray: recommendAdd,
       productInfo: true,
       productSubmit: false
-    })
+    });
   },
-  // 
   checkboxChange: function (e) {
     recommendAdd = e.detail.value;
   },
