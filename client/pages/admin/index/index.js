@@ -102,6 +102,16 @@ Page({
       reserve: true,
       reserve_text: "已处理"
 
+    }]);
+    wx.setStorageSync("Store0", [{
+      'img': "/pages/admin/image/a/dian.png",
+      'Product_name': "石景山店",
+      'Product_Info': "石景山古城店"
+    }]);
+    wx.setStorageSync("key0", [{
+      'img': " https://lg-14y7j4wa-1256666116.cos.ap-shanghai.myqcloud.com/AiMeiLi_one.png",
+      'Product_name': "精华洗面奶",
+      'Product_Info': "精华洗面奶"
     }])
 
   },
